@@ -10,7 +10,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title', 'L8BBS') - Laravel8.*</title>
-
+  <meta name="description" content="@yield('description', 'L8BBS 爱好者社区')" />
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
   @yield('styles')
