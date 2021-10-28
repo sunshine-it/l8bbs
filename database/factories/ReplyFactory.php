@@ -5,6 +5,8 @@ namespace Database\Factories;
 use App\Models\Reply;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+use GuzzleHttp\Client;
+
 // 话题回复工厂类
 class ReplyFactory extends Factory
 {
