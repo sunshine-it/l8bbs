@@ -10,9 +10,13 @@ use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 
 use Auth;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable  implements MustVerifyEmailContract
 {
+    // 角色权限相关
+    use HasRoles;
+
     use HasApiTokens, HasFactory, Notifiable;
 
     // 回复通知
