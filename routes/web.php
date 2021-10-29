@@ -32,5 +32,8 @@ Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 
 // 上传图片路由
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
-
+// 话题回复操作资源路由
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+
+// 通知路由
+Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
