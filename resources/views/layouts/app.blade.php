@@ -10,7 +10,8 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title', 'L8BBS') - Laravel8.*</title>
-  <meta name="description" content="@yield('description', 'L8BBS 爱好者社区')" />
+  <meta name="description" content="@yield('description', setting('seo_description', 'L8BBS 爱好者社区。'))" />
+  <meta name="keywords" content="@yield('keyword', setting('seo_keyword', 'L8BBS,社区,论坛,开发者论坛'))" />
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
   @yield('styles')
