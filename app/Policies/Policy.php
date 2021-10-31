@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 
+// 授权策略类
 class Policy
 {
     use HandlesAuthorization;
