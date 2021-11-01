@@ -22,7 +22,7 @@ trait ActiveUserHelper
 
     // 缓存相关配置
     protected $cache_key = 'larabbs_active_users';
-    protected $cache_expire_in_seconds = 65 * 60;
+    protected $cache_expire_in_seconds = 65 * 60; // 3900 分钟
 
     public function getActiveUsers()
     {
