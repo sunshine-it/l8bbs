@@ -18,7 +18,7 @@ class Kernel extends ConsoleKernel
 
     /**
      * Define the application's command schedule.
-     *
+     * // 任务调度方法
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
@@ -27,6 +27,8 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
         // 一小时执行一次『活跃用户』数据生成的命令
         $schedule->command('l8bbs:calculate-active-user')->hourly();
+        // 每天凌晨00:00点执行一次 「记录最后用户登陆时间」数据生成命令
+        $schedule->command('l8bbs:sync-user-actived-at')->dailyAt('00:00');
     }
 
     /**
