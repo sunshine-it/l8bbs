@@ -118,4 +118,10 @@ class User extends Authenticatable  implements MustVerifyEmailContract
 
         $this->attributes['avatar'] = $path;
     }
+
+    // 话题回复 一个用户可以拥有多条评论
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
 }
